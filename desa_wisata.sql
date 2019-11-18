@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 18, 2018 at 08:21 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Host: localhost
+-- Generation Time: Nov 18, 2019 at 10:14 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cias`
+-- Database: `desa_wisata`
 --
 
 -- --------------------------------------------------------
@@ -30,9 +32,36 @@ CREATE TABLE `ci_sessions` (
   `session_id` varchar(40) NOT NULL DEFAULT '0',
   `ip_address` varchar(45) NOT NULL DEFAULT '0',
   `user_agent` varchar(120) NOT NULL,
-  `last_activity` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `last_activity` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `user_data` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `destinasi`
+--
+
+CREATE TABLE `destinasi` (
+  `id` int(5) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `foto` text NOT NULL,
+  `harga_tiket` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `destinasi`
+--
+
+INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `foto`, `harga_tiket`) VALUES
+(5, 'towjo park', 'towjopark', 'download_(1).jpeg', '5000'),
+(7, 'adsdd', 'sdsdsd', 'download_(1).jpeg', '232323'),
+(8, 'towjo park', 'sebuahekor', 'download_(2).jpeg', '5000'),
+(9, 'sriver tubing', 'sebuah kayu', 'download.jpeg', '80000'),
+(10, 'hu', 'ds', 'Screen_Shot_2019-11-18_at_10_57_45_AM.png', '26000'),
+(11, 'dsa', 'dsdd', 'Screen_Shot_2019-11-06_at_4_43_12_PM.png', '26000'),
+(12, 'dsdsd', 'sdsdsd', 'Screen_Shot_2019-11-08_at_7_00_17_AM.png', '28000');
 
 -- --------------------------------------------------------
 
@@ -48,8 +77,23 @@ CREATE TABLE `tbl_last_login` (
   `userAgent` varchar(128) NOT NULL,
   `agentString` varchar(1024) NOT NULL,
   `platform` varchar(128) NOT NULL,
-  `createdDtm` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `createdDtm` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_last_login`
+--
+
+INSERT INTO `tbl_last_login` (`id`, `userId`, `sessionData`, `machineIp`, `userAgent`, `agentString`, `platform`, `createdDtm`) VALUES
+(1, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 77.0.3865.120', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36', 'Mac OS X', '2019-10-30 00:22:20'),
+(2, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 77.0.3865.120', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36', 'Mac OS X', '2019-10-30 00:24:20'),
+(3, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 77.0.3865.120', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36', 'Mac OS X', '2019-10-30 00:26:18'),
+(4, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-17 06:32:19'),
+(5, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-17 14:07:27'),
+(6, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-17 17:02:33'),
+(7, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-17 17:16:07'),
+(8, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-18 09:10:46'),
+(9, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '::1', 'Chrome 78.0.3904.97', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'Mac OS X', '2019-11-18 15:51:32');
 
 -- --------------------------------------------------------
 
@@ -63,8 +107,8 @@ CREATE TABLE `tbl_reset_password` (
   `activation_id` varchar(32) NOT NULL,
   `agent` varchar(512) NOT NULL,
   `client_ip` varchar(32) NOT NULL,
-  `isDeleted` tinyint(4) NOT NULL DEFAULT '0',
-  `createdBy` bigint(20) NOT NULL DEFAULT '1',
+  `isDeleted` tinyint(4) NOT NULL DEFAULT 0,
+  `createdBy` bigint(20) NOT NULL DEFAULT 1,
   `createdDtm` datetime NOT NULL,
   `updatedBy` bigint(20) DEFAULT NULL,
   `updatedDtm` datetime DEFAULT NULL
@@ -103,7 +147,7 @@ CREATE TABLE `tbl_users` (
   `name` varchar(128) DEFAULT NULL COMMENT 'full name of user',
   `mobile` varchar(20) DEFAULT NULL,
   `roleId` tinyint(4) NOT NULL,
-  `isDeleted` tinyint(4) NOT NULL DEFAULT '0',
+  `isDeleted` tinyint(4) NOT NULL DEFAULT 0,
   `createdBy` int(11) NOT NULL,
   `createdDtm` datetime NOT NULL,
   `updatedBy` int(11) DEFAULT NULL,
@@ -129,6 +173,12 @@ INSERT INTO `tbl_users` (`userId`, `email`, `password`, `name`, `mobile`, `roleI
 ALTER TABLE `ci_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD KEY `last_activity_idx` (`last_activity`);
+
+--
+-- Indexes for table `destinasi`
+--
+ALTER TABLE `destinasi`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_last_login`
@@ -159,25 +209,36 @@ ALTER TABLE `tbl_users`
 --
 
 --
+-- AUTO_INCREMENT for table `destinasi`
+--
+ALTER TABLE `destinasi`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `tbl_last_login`
 --
 ALTER TABLE `tbl_last_login`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `tbl_reset_password`
 --
 ALTER TABLE `tbl_reset_password`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `tbl_roles`
 --
 ALTER TABLE `tbl_roles`
   MODIFY `roleId` tinyint(4) NOT NULL AUTO_INCREMENT COMMENT 'role id', AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
   MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
