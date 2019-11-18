@@ -1,0 +1,105 @@
+body{
+	background-color:  #fff;
+	background-image: url("../../gambar/bg.jpg")
+}
+
+.title{
+	color: red;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.mg-top-50 {
+	margin-top: 50px;
+}
+
+.header-img{
+	width: 100%
+}
+.boxheader{
+	display: block;
+	margin-bottom: 40px
+}
+
+.caption-text{
+	color: #000066;
+	font-size: 20px;
+}
+.text{
+	color:black;
+}
+
+.content{
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 25px;
+}
+
+.header-nav{
+	margin-bottom: 5px;
+	background-color: #FAFAFA;
+	height: 60px;
+}
+
+.box-logo{
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-header {
+	height: 30px;
+	margin-left: 15px
+}
+
+.text-logo{
+	margin-left: 5px
+}
+
+.nav-link-header{
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: #000
+}
+
+.quote{
+	width: 30px
+}
+
+.text-quote{
+	margin-top: 15px
+}
+
+.box-quote{
+	background-color: #FAFAFA;
+	padding: 15px;
+}
+
+.page-footer{
+	background-color: #00838f;
+	margin-top: 50px;
+}
+
+.footer-copyright{
+	background-color: rgba(0,0,0,.2);
+	color: rgba(255,255,255,.6);
+}
+
+.footer-copyright > span {
+	color: #fff
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.white-text{
+	color: #fff
+}
