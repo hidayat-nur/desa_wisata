@@ -17,17 +17,10 @@
 		    <div class="col-sm-9">
 		    	<div class="row">
 
-            <?php
-            foreach($daftarDestinasi as $record){ ?>
-                <div class="col-sm-4">
-                    <a href="<?php echo base_url() ?>destinasiDetails/<?php echo $record->id ?>">
-                        <figure class="figure">
-                            <img src="<?php echo base_url() ?>assets/gambar/destinasi/<?php echo $record->foto ?>" class="figure-img img-fluid rounded" alt="wisata">
-                            <figcaption class="figure-caption caption-text text-center"><?php echo $record->nama ?></figcaption>
-                        </figure>	
-                    </a>
+                <div class="hero-unit">
+                <h1><?php echo $daftarDestinasi->nama ?></h1>
+                <p><?php echo $daftarDestinasi->deskripsi ?></p>
                 </div>
-            <?php } ?>
 
 				  </div>
 			  </div>

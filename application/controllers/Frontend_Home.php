@@ -30,6 +30,14 @@ class Frontend_home extends CI_Controller
         $data['daftarUlasan'] = $this->ulasan_model->getSemuaUlasan();
         $this->load->view('home', $data);
     }
+
+    public function destinasiDetails($id)
+    {
+        $data['daftarDestinasi'] = $this->destinasi_model->getDestinasiById($id);
+        $data['daftarCarousel'] = $this->event_model->getSemuaEvent();
+        $data['daftarUlasan'] = $this->ulasan_model->getSemuaUlasan();
+        $this->load->view('destinasiDetails', $data);
+    }
 }
 
 ?>

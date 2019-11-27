@@ -54,6 +54,8 @@ $route['default_controller'] = "frontend_home";
 $route['404_override'] = 'error_404';
 $route['translate_uri_dashes'] = FALSE;
 
+// frontend
+$route['destinasiDetails/(:num)'] = "frontend_home/destinasiDetails/$1";
 
 /*********** USER DEFINED ROUTES *******************/
 $route['admin'] = 'login';
