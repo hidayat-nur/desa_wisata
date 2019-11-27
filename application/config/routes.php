@@ -73,6 +73,13 @@ $route['editDestinasiProses/(:num)'] = "destinasi/editDestinasiProses/$1";
 $route['hapusDestinasi/(:num)'] = "destinasi/hapusDestinasi/$1";
 // $route['userListing/(:num)'] = "user/userListing/$1";
 
+$route['daftarEvents'] = 'event/daftarEvents';
+$route['tambahEvent'] = "event/tambahEvent";
+$route['tambahEventProses'] = "event/tambahEventProses";
+$route['editEvent/(:num)'] = "event/editEvent/$1";
+$route['editEventProses/(:num)'] = "event/editEventProses/$1";
+$route['hapusEvent/(:num)'] = "event/hapusEvent/$1";
+
 $route['addNew'] = "user/addNew";
 $route['addNewUser'] = "user/addNewUser";
 $route['editOld'] = "user/editOld";

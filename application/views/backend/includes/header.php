@@ -108,6 +108,12 @@
               </a>
             </li>
             <li>
+              <a href="<?php echo base_url(); ?>/daftarEvents" >
+                <i class="fa fa-plane"></i>
+                <span>Events</span>
+              </a>
+            </li>
+            <li>
               <a href="<?php echo base_url(); ?>daftarDestinasi" >
                 <i class="fa fa-plane"></i>
                 <span>Destinasi</span>
