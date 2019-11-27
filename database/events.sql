@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 27, 2019 at 06:45 AM
+-- Generation Time: Nov 27, 2019 at 07:07 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.32
 
@@ -37,6 +37,14 @@ CREATE TABLE `events` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id_event`, `nama`, `deskripsi`, `foto`, `tgl_acara`) VALUES
+(4, 'pasar rayang', 'gunung rayang adalah bukit batu besar di tengah desa sendangdalem ,gunung rayang dihuni ratusan monyet liar', 'gunung-rayang.jpg', '2019-11-13'),
+(5, 'Festival Kali sat 2019', 'festival kali sat adalah event tahunan yang diselenggarakan oleh pkdarwis sendal explore , festival ini dilaksanakan setiap tanggal 1 agustus dan biasa dikunjungi ribuan pengunjung dari berbagai daerah sekitar.', 'fks_besar.png', '2019-11-19');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -54,7 +62,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id_event` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_event` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
