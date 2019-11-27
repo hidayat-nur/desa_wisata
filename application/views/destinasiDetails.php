@@ -20,7 +20,7 @@
                 <div class="hero-unit">
                 <h1><?php echo $daftarDestinasi->nama ?></h1>
                 <img src="<?php echo base_url() ?>assets/gambar/destinasi/<?php echo $daftarDestinasi->foto ?>" alt="Destinasi Image" style="width: 350px">
-                <p><?php echo $daftarDestinasi->deskripsi ?></p>
+                <p style="margin-top: 20px"><?php echo $daftarDestinasi->deskripsi ?></p>
                 </div>
 
 				  </div>
