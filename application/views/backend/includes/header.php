@@ -119,6 +119,12 @@
                 <span>Destinasi</span>
               </a>
             </li>
+            <li>
+              <a href="<?php echo base_url(); ?>daftarUlasan" >
+                <i class="fa fa-plane"></i>
+                <span>Ulasan</span>
+              </a>
+            </li>
             <!-- <li>
               <a href="#" >
                 <i class="fa fa-ticket"></i>

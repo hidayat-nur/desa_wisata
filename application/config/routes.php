@@ -80,6 +80,13 @@ $route['editEvent/(:num)'] = "event/editEvent/$1";
 $route['editEventProses/(:num)'] = "event/editEventProses/$1";
 $route['hapusEvent/(:num)'] = "event/hapusEvent/$1";
 
+$route['daftarUlasan'] = 'ulasan/daftarUlasan';
+$route['tambahUlasan'] = "ulasan/tambahUlasan";
+$route['tambahUlasanProses'] = "ulasan/tambahUlasanProses";
+$route['editUlasan/(:num)'] = "ulasan/editUlasan/$1";
+$route['editUlasanProses/(:num)'] = "ulasan/editUlasanProses/$1";
+$route['hapusUlasan/(:num)'] = "ulasan/hapusUlasan/$1";
+
 $route['addNew'] = "user/addNew";
 $route['addNewUser'] = "user/addNewUser";
 $route['editOld'] = "user/editOld";

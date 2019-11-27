@@ -17,6 +17,7 @@ class Frontend_home extends CI_Controller
         parent::__construct();
         $this->load->model('destinasi_model');
         $this->load->model('event_model');
+        $this->load->model('ulasan_model');
     }
 
     /**
@@ -26,6 +27,7 @@ class Frontend_home extends CI_Controller
     {
         $data['daftarDestinasi'] = $this->destinasi_model->getSemuaDestinasi();
         $data['daftarCarousel'] = $this->event_model->getSemuaEvent();
+        $data['daftarUlasan'] = $this->ulasan_model->getSemuaUlasan();
         $this->load->view('home', $data);
     }
 }
