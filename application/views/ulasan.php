@@ -1,4 +1,3 @@
-daftarUlasan
 <div class="row mg-top-50">
     <?php
     foreach($daftarUlasan as $record){ ?>
