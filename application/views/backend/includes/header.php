@@ -125,6 +125,12 @@
                 <span>Ulasan</span>
               </a>
             </li>
+            <li>
+              <a href="<?php echo base_url(); ?>daftarRuangInfo" >
+                <i class="fa fa-plane"></i>
+                <span>Ruang Info</span>
+              </a>
+            </li>
             <!-- <li>
               <a href="#" >
                 <i class="fa fa-ticket"></i>

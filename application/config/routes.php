@@ -56,6 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 // frontend
 $route['destinasiDetails/(:num)'] = "frontend_home/destinasiDetails/$1";
+$route['destinasi/(:num)'] = "frontend_home/index/$1";
+$route['ruangInfoDetails/(:num)'] = "frontend_home/ruangInfoDetails/$1";
 
 /*********** USER DEFINED ROUTES *******************/
 $route['admin'] = 'login';
@@ -81,6 +83,10 @@ $route['tambahEventProses'] = "event/tambahEventProses";
 $route['editEvent/(:num)'] = "event/editEvent/$1";
 $route['editEventProses/(:num)'] = "event/editEventProses/$1";
 $route['hapusEvent/(:num)'] = "event/hapusEvent/$1";
+
+$route['daftarRuangInfo'] = 'ruangInfo/daftarRuangInfo';
+$route['editRuangInfo/(:num)'] = "ruangInfo/editRuangInfo/$1";
+$route['editRuangInfoProses/(:num)'] = "ruangInfo/editRuangInfoProses/$1";
 
 $route['daftarUlasan'] = 'ulasan/daftarUlasan';
 $route['tambahUlasan'] = "ulasan/tambahUlasan";

@@ -14,30 +14,25 @@
           
 	  <div class="container-fluid content">
 	  	<div class="row">
+
 		    <div class="col-sm-9">
-		    	<div class="row">
-
-                <div class="hero-unit">
-                <h1><?php echo $daftarDestinasi->nama ?></h1>
-                <img src="<?php echo base_url() ?>assets/gambar/destinasi/<?php echo $daftarDestinasi->foto ?>" alt="Destinasi Image" style="width: 350px">
-                <p style="margin-top: 20px"><?php echo $daftarDestinasi->deskripsi ?></p>
-                </div>
-
-				  </div>
-			  </div>
+                <ul class="breadcrumb">
+                    <li><a href="<?php echo base_url() ?>">Home</a> <span class="divider">/</span></li>
+                    <li class="active"><?php echo $daftarDestinasi->nama ?></li>
+                </ul>
+		    	<div>
+                    <div class="hero-unit">
+                        <h3><?php echo $daftarDestinasi->nama ?></h3>
+                        <img src="<?php echo base_url() ?>assets/gambar/destinasi/<?php echo $daftarDestinasi->foto ?>" alt="Destinasi Image" class="img-destinasi-details">
+                        <p style="margin-top: 20px"><?php echo $daftarDestinasi->deskripsi ?></p>
+                    </div>
+				</div>
+		    </div>
 			
-        <div class="col-sm-3">
-          <ul class="list-group">
-            <li class="list-group-item active">Ruang Info</li>
-            <li class="list-group-item">Event</li>
-            <li class="list-group-item">Wisata sekitar</li>
-            <li class="list-group-item">Tiket masuk</li>
-            <li class="list-group-item">kuliner</li>
-            <li class="list-group-item">Home stay</li>
-             <li class="list-group-item">Hubungi Kami</li>
-          </ul>
-        </div>
-      </div>		
+            <?php $this->load->view('menukanan') ?>
+        </div>	
+        
+        <hr class="hr-dashed" />		
       
       <?php $this->load->view('ulasan') ?>
       

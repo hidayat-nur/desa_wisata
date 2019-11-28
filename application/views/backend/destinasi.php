@@ -50,7 +50,7 @@
                     <tr>
                         <td><?php echo $no ?></td>
                         <td><?php echo $record->nama ?></td>
-                        <td><?php echo $record->deskripsi ?></td>
+                        <td><?php echo substr($record->deskripsi, 0, 100) ?>...</td>
                         <td>
                             <img src="<?php echo base_url() ?>assets/gambar/destinasi/<?php echo $record->foto ?>" class="img_table" alt="Destinasi Image">
                         </td>

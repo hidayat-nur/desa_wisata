@@ -7,6 +7,49 @@ body{
 	color: red;
 }
 
+.hr-dashed{
+	border-top: dotted 1px;
+}
+
+.figure-destinasi{
+	display: block;
+	text-align: center;
+}
+
+.box-destinasi{
+	border-radius: 15px;
+	margin-bottom: 15px;
+	display: block;
+	background-color: #efefef;
+	padding-bottom: 2px;
+}
+
+.menu-link:hover, .menu-link:focus{
+	text-decoration: none;
+}
+
+.row-pagination-destinasi{
+	justify-content: center;
+}
+
+.pagination-destinasi{
+	margin-top: 25px;
+}
+
+.img-destinasi-details{
+	width: 350px;
+	margin-top: 15px;
+}
+
+.box-destinasi:focus, .box-destinasi:hover{
+	text-decoration: none;
+}
+
+.img-destinasi{
+	width: 100%;
+	height: auto;
+}
+
 .content-center {
     justify-content: center;
 }
